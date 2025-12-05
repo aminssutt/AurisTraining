@@ -1,0 +1,102 @@
+# ================================
+# Fichiers sensibles - NE JAMAIS COMMITER
+# ================================
+.env
+.env.local
+.env.*.local
+*.env
+secrets.json
+credentials.json
+
+# ================================
+# Données volumineuses / PDFs
+# ================================
+backend/data/pdfs/*.pdf
+*.pdf
+
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.cover
+*.log
+
+# ================================
+# ChromaDB - Base de données vectorielle
+# ================================
+chroma_db/
+*.db
+
+# ================================
+# Node.js / React / Vite
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+frontend/dist/
+frontend/build/
+.vite/
+
+# ================================
+# IDE / Éditeurs
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ================================
+# OS
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ================================
+# Vercel
+# ================================
+.vercel
+
+# ================================
+# Autres
+# ================================
+*.bak
+*.tmp
+*.temp
