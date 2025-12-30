@@ -29,7 +29,7 @@ if not GOOGLE_API_KEY:
 
 # Configuration du modèle
 EMBEDDING_MODEL = "models/embedding-001"
-LLM_MODEL = "gemini-2.0-flash"
+LLM_MODEL = "models/gemini-2.0-flash"
 
 # Configuration du chunking
 CHUNK_SIZE = 1000

@@ -21,6 +21,8 @@ app = Flask(__name__)
 # Configuration CORS
 ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
     "http://localhost:3000",
     "https://*.vercel.app",
 ]
@@ -29,7 +31,7 @@ FRONTEND_URL = os.getenv("FRONTEND_URL", "")
 if FRONTEND_URL:
     ALLOWED_ORIGINS.append(FRONTEND_URL)
 
-CORS(app, origins=ALLOWED_ORIGINS, supports_credentials=True)
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 
 # Configuration upload
 MAX_FILE_SIZE = 50 * 1024 * 1024  # 50 MB par fichier

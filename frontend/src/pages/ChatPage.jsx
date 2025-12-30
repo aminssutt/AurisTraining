@@ -4,15 +4,6 @@ import './ChatPage.css'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
-const SUGGESTIONS = [
-  "Comment fonctionne le système de freinage ?",
-  "Quelle est la pression recommandée des pneus ?",
-  "Que signifie le voyant moteur allumé ?",
-  "Comment faire une vidange ?",
-  "Quelle est la capacité du réservoir ?",
-  "Comment connecter mon téléphone en Bluetooth ?"
-]
-
 function ChatPage() {
   const { sessionId } = useParams()
   const navigate = useNavigate()
@@ -152,18 +143,6 @@ function ChatPage() {
               <br />
               Posez-moi vos questions sur l'entretien, le fonctionnement ou les caractéristiques de votre véhicule.
             </p>
-            
-            <div className="suggestions-grid">
-              {SUGGESTIONS.map((suggestion, index) => (
-                <button
-                  key={index}
-                  className="suggestion-btn"
-                  onClick={() => sendMessage(suggestion)}
-                >
-                  {suggestion}
-                </button>
-              ))}
-            </div>
           </div>
         )}
 
