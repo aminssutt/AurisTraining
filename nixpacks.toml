@@ -1,10 +1,10 @@
 providers = ["python"]
 
 [phases.setup]
-nixPkgs = ["python313", "gcc"]
+nixPkgs = ["python313", "python313Packages.pip", "gcc"]
 
 [phases.install]
-cmds = ["cd backend && pip install -r requirements.txt"]
+cmds = ["cd backend && python -m pip install -r requirements.txt"]
 
 [start]
 cmd = "cd backend && python api.py"
